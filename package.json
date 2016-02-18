@@ -1,0 +1,24 @@
+{
+  "name": "librize-enbed",
+  "version": "1.0.0",
+  "description": "Librize Embed Widget",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "chokidar 'src/**' -c 'npm run build'"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-strict-mode": "^6.5.0",
+    "babel-preset-es2015-rollup": "^1.0.0",
+    "chokidar-cli": "^1.2.0",
+    "fetch-jsonp": "^1.0.0",
+    "riot": "^2.3.12",
+    "riot-route": "^2.3.15",
+    "rollup": "^0.24.0",
+    "rollup-plugin-babel": "^2.3.8",
+    "rollup-plugin-commonjs": "^2.1.0",
+    "rollup-plugin-npm": "^1.2.1",
+    "rollup-plugin-riot": "^0.1.0"
+  },
+  "license": "MIT"
+}
