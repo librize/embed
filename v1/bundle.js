@@ -2876,7 +2876,8 @@ route('bookspot/*/latest..', function (bookspot) {
     return response.json();
   }).then(function (books) {
     books = books.map(function (book) {
-      book.hasCover = book.image && book.image != 'no-item-medium-image.jpg';
+      if (book.image == 'no-item-medium-image.jpg') book.image = '';
+      book.hasCover = !!book.image;
       return book;
     });
     riot$1.mount('app', { books: books, height: height });

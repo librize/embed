@@ -21,7 +21,9 @@ route('bookspot/*/latest..', function(bookspot) {
     .then(response => response.json())
     .then(books => {
       books = books.map(book => {
-        book.hasCover = book.image && book.image != 'no-item-medium-image.jpg'
+        if (book.image == 'no-item-medium-image.jpg')
+          book.image = ''
+        book.hasCover = !!book.image
         return book
       })
       riot.mount('app', { books, height })
